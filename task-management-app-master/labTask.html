@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>TMS</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+  <script>
+    var objPeople = [
+{ 
+username: "nabeel",
+password: "1234"
+},
+{ 
+username: "anees",
+password: "1234"
+},
+{ 
+username: "hidayat",
+password: "1234"
+},
+{
+username: "aliya",
+password: "1234"
+}
+
+]
+
+function getInfo(event) {
+
+  event.preventDefault();
+
+debugger
+var username = document.getElementById('uname').value
+var password = document.getElementById('pwd').value
+console.log(username,password)
+
+
+for(var i = 0; i < objPeople.length; i++) {
+// check is user input matches username and password of a current index of the objPeople array
+if(username == objPeople[i].username && password == objPeople[i].password) {
+console.log(username + " is logged in!!!")
+// stop the function if this is found to be true
+alert("success!")	
+break;
+}
+
+else{
+alert("Invalid!")
+
+break;
+
+}
+
+}
+
+
+console.log("incorrect username or password")
+}
+  </script>
+
+	<body>
+		<div class="container">
+            <div class="row justify-content-center pt-5 text-primary">
+                <h1 class="display-3 pb-5">Login Form</h1>
+            </div>
+            <div>
+
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                </div>
+                <div class="col-sm-4">
+            <form action="file:///C:/Users/CybOrg_X/OneDrive/Desktop/My%20programss/TMS/task-management-app-master/index.html">
+                <div class="form-group">
+                  <label for="email">Username:</label>
+                  <input type="text" class="form-control" id="uname" placeholder="Enter email" name="email">
+                </div>
+                <div class="form-group">
+                  <label for="pwd">Password:</label>
+                  <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
+                </div>
+                <div class="form-group form-check">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox" name="remember"> Remember me
+                  </label>
+                </div>
+                <button type="submit" onclick="getInfo()" class="btn btn-success">Login</button>
+              </form>
+             </div>
+             <div class="col-sm-4">
+
+             </div>
+            </div>
+
+   
+    </body>
+</html>
